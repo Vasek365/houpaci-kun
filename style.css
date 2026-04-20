@@ -149,7 +149,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('Vybrané obrázky/domov1.jpg') center/cover no-repeat;
+  background: url('images/domov1.jpg') center/cover no-repeat;
   opacity: 0.12;
 }
 
