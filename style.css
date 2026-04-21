@@ -467,6 +467,38 @@ section {
   background: var(--light-gray);
 }
 
+/* Map placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 280px;
+  background: #e8f5e8;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.map-placeholder-inner p {
+  margin: 0.25rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.map-coords {
+  font-size: 0.8rem !important;
+  color: #888 !important;
+  font-family: monospace;
+}
+
+.map-pin {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -475,17 +507,31 @@ section {
 }
 
 .contact-info h3 {
-  font-size: 1.05rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .contact-info p {
   font-size: 0.95rem;
   color: #444;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.contact-info a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .contact-form {
