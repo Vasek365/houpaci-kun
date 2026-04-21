@@ -624,7 +624,7 @@ footer a {
   text-decoration: none;
 }
 
-/* ── SUBPAGE HERO ── */
+/* ── SUBPAGE HERO (old, kept for compatibility) ── */
 .subpage-hero {
   padding: 9rem 2rem 5rem;
   background: linear-gradient(160deg, #f9fdf9 0%, #e8f5e8 100%);
@@ -659,6 +659,153 @@ footer a {
   color: #555;
   max-width: 540px;
   margin: 0 auto;
+}
+
+/* ── SUBPAGE HERO 16:9 ── */
+.subpage-hero-widescreen {
+  margin-top: 70px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.subpage-hero-widescreen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+.subpage-hero-content {
+  position: relative;
+  max-width: 760px;
+  padding: 2rem;
+  color: #fff;
+}
+
+.subpage-hero-content .hero-eyebrow {
+  color: rgba(255,255,255,0.8);
+}
+
+.subpage-hero-content h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.subpage-hero-content .subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── SUBPAGE INTRO ── */
+.subpage-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+}
+
+.subpage-intro p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.9;
+}
+
+.subpage-intro .back-link {
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+/* ── SUBPAGE FULL PHOTO ── */
+.subpage-photo-full {
+  width: 100%;
+  max-height: 520px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.subpage-photo-full img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── SUBPAGE FEATURE CARDS ── */
+.subpage-features-section {
+  background: var(--light-gray);
+  padding: 5rem 2rem;
+}
+
+.subpage-features-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.subpage-feature-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subpage-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.subpage-feature-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.subpage-feature-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .subpage-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .subpage-hero-widescreen {
+    aspect-ratio: 4 / 3;
+  }
+
+  .subpage-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subpage-photo-full img {
+    height: 280px;
+  }
 }
 
 /* ── SUBPAGE CONTENT ── */
