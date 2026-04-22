@@ -1,3 +1,18 @@
+// ── HERO VIDEO AUTOPLAY ──
+const heroVideo = document.querySelector('.hero-bg-video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.playsInline = true;
+  const playPromise = heroVideo.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Retry on first user interaction if browser blocked autoplay
+      document.addEventListener('click', () => heroVideo.play(), { once: true });
+      document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
+    });
+  }
+}
+
 // ── NAVIGATION ──
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
