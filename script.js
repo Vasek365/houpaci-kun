@@ -95,17 +95,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') showNext();
 });
 
-// ── MAP TABS ──
-document.querySelectorAll('.map-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.map;
-    document.querySelectorAll('.map-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('map-' + target)?.classList.add('active');
-  });
-});
-
 // ── CONTACT FORM ──
 const form = document.getElementById('contact-form');
 const formSuccess = document.querySelector('.form-success');
