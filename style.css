@@ -537,43 +537,19 @@ section {
   background: var(--light-gray);
 }
 
-/* Map placeholder */
-.map-placeholder {
-  width: 100%;
-  height: 280px;
-  background: #e8f5e8;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.map-placeholder-inner p {
-  margin: 0.25rem 0;
-  color: #444;
-  font-size: 0.95rem;
-}
-
-.map-coords {
-  font-size: 0.8rem !important;
-  color: #888 !important;
-  font-family: monospace;
-}
-
-.map-pin {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
   align-items: start;
+}
+
+.contact-map {
+  height: 480px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .contact-info h3 {
@@ -1025,6 +1001,10 @@ footer a {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .contact-map {
+    height: 300px;
   }
 
   .services-grid {

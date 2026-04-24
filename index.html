@@ -165,16 +165,6 @@
       <p class="section-label">Kontakt</p>
       <h2 class="section-title">Ozvěte se nám</h2>
 
-      <!-- Map placeholder -->
-      <div class="map-placeholder">
-        <div class="map-placeholder-inner">
-          <span class="map-pin">📍</span>
-          <p>Samota u houpacího koně</p>
-          <p class="map-coords">49°22'6.470"N, 14°39'43.974"E</p>
-          <a href="https://maps.google.com/?q=49.368464,14.662215" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:1rem;">Otevřít v Google Maps</a>
-        </div>
-      </div>
-
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Kontaktní osoba</h3>
@@ -197,37 +187,18 @@
           </p>
         </div>
 
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Jméno a příjmení</label>
-              <input type="text" id="name" name="name" placeholder="Jana Nováková" required />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="jana@email.cz" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="subject">Zájem o</label>
-            <select id="subject" name="subject">
-              <option value="">Vyberte typ akce…</option>
-              <option>Svatba</option>
-              <option>Teambuilding / konference</option>
-              <option>Terapeutický pobyt</option>
-              <option>Jiné ubytování</option>
-              <option>Obecný dotaz</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Zpráva</label>
-            <textarea id="message" name="message" placeholder="Popište nám váš záměr, přibližný termín a počet osob…" required></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn">Odeslat zprávu</button>
-            <span class="form-success">✓ Zpráva odeslána! Ozveme se vám co nejdříve.</span>
-          </div>
-        </form>
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=49.368464,14.662215&z=16&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Samota u houpacího koně – mapa">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
