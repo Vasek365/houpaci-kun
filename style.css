@@ -854,6 +854,43 @@ footer a {
   }
 }
 
+/* ── SUBPAGE GALLERY ── */
+.subpage-gallery-section {
+  padding: 0 2rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.subpage-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.sg-item {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--light-gray);
+}
+
+.sg-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.sg-item:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .subpage-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ── SUBPAGE CONTENT ── */
 .subpage-content {
   padding: 5rem 2rem;
