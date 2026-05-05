@@ -981,6 +981,76 @@ footer a {
   margin-bottom: 2rem;
 }
 
+/* ── SPEAKERS ── */
+.speakers-section {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.speakers-section h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.speakers-section .speakers-sub {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+}
+
+.speakers-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.speaker-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.speaker-card:hover img {
+  border-color: var(--accent);
+}
+
+.speaker-card .speaker-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .speakers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .services-grid {
