@@ -46,7 +46,7 @@ document.addEventListener('click', (e) => {
 // ── LIGHTBOX ──
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
-const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryItems = document.querySelectorAll('.gallery-item, .sg-item');
 let currentIndex = 0;
 
 const images = Array.from(galleryItems).map(item => item.querySelector('img'));

@@ -882,6 +882,7 @@ footer a {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--light-gray);
+  cursor: pointer;
 }
 
 .sg-item img {
