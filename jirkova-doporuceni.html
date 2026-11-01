@@ -39,18 +39,177 @@
     <a href="index.html" class="back-link">Zpět na úvod</a>
     <h1>Jirkova doporučení</h1>
 
-    <!-- Nové doporučení = zkopírovat celý <li> blok. Text v <p> je nepovinný. -->
+    <!-- Heslo je jen závora pro náhodné návštěvníky: obsah zůstává ve zdrojovém kódu stránky. -->
+    <form id="gate" class="gate">
+      <label for="gate-password">Stránka je chráněná heslem.</label>
+      <div class="gate-row">
+        <input type="password" id="gate-password" autocomplete="current-password" required />
+        <button type="submit" class="btn">Vstoupit</button>
+      </div>
+      <p id="gate-error" class="gate-error" hidden>Nesprávné heslo.</p>
+    </form>
+
+    <div id="recommendations-content" hidden>
+    <!--
+      Nové doporučení: zkopírovat celý blok <li>…</li> a vložit ho nahoru (nejnovější první).
+      Odkaz ven = <a class="rec-title">, text ke čtení = <details> se <summary>.
+    -->
     <ul class="recommendation-list">
+
       <li>
-        <a href="https://www.youtube.com/watch?v=iSZNd54ePo4" target="_blank" rel="noopener">Slepec v chrámu noci</a>
+        <a class="rec-title" href="https://www.youtube.com/watch?v=iSZNd54ePo4" target="_blank" rel="noopener">Slepec v chrámu noci</a>
+        <p class="rec-meta">Video · Michal Souček</p>
       </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Konference Vize Česka</span><span class="rec-meta">15.–16. 10. 2026 · Kino Svět Tábor</span></summary>
+          <div class="rec-body">
+            <p>Dvoudenní konference v táborském Kině Svět. První den patřil veřejnému hlavnímu panelu, druhý den neveřejnému studentskému panelu. Mezi organizátory byl Jihočeský kraj, město Tábor, Gymnázium Pierra de Coubertina Tábor a MVDr. Jiří Návara.</p>
+            <h3>Hlavní panel – 15. 10. 2026</h3>
+            <ul>
+              <li><strong>prof. RNDr. Tomáš Cajthaml, Ph.D., DSc.</strong> (PřF UK) – Postmoderní, neudržitelné a neviditelné znečištění kolem nás</li>
+              <li><strong>PhDr. Ing. Martin Janíčko, Ph.D.</strong> (MND a.s.) – Česká ekonomika dnes, zítra a pozítří</li>
+              <li><strong>PhDr. Martin Ehl, Ph.D.</strong> (Hospodářské noviny) – Globální soupeření Číny a USA</li>
+              <li><strong>doc. RNDr. Marek Špinka, CSc.</strong> (ČZU) – Inteligence a emoce: evoluční pohled na psychiku zvířat a člověka</li>
+              <li><strong>doc. RNDr. Mgr. Ivan Hadrián Tuf, Ph.D.</strong> (UP Olomouc) – Proč si myslíme, že jsme morální – a proč se mýlíme?</li>
+              <li><strong>RNDr. Václav Cílek, CSc.</strong> – Jak zacházet s budoucností? Periodicita, megatrendy a foresightová analýza</li>
+              <li><strong>prof. Dr. RNDr. Oldřich Lapčík</strong> (VŠCHT) – Biologicky aktivní látky</li>
+            </ul>
+            <p><a href="doporuceni/vize-ceska-2026.pdf" target="_blank" rel="noopener">Plakát konference (PDF)</a></p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Mléko A2</span><span class="rec-meta">8. 10. 2026</span></summary>
+          <div class="rec-body">
+            <p>Velká část lidí je na běžné mléko typu A1 alergická nebo na něj aspoň mírně citlivá. Mléko od krav jižních plemen typu A2 jim obvykle potíže nedělá.</p>
+            <p>V jižních Čechách ho vyrábí Mlékárna Vlkov u Ševětína, prodejny má i v Praze. Jirka radí: zeptejte se intuice, jestli vám mléko A1 nedělá problém, vyzkoušejte výrobky z A2 a sledujte, jestli se po nich necítíte lépe.</p>
+            <p><a href="https://www.mlekarnavlkov.cz" target="_blank" rel="noopener">www.mlekarnavlkov.cz</a></p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Duševní zdraví</span><span class="rec-meta">30. 9. 2026 · Jiří Návara</span></summary>
+          <div class="rec-body">
+            <p>Koncem září proběhla tiskem zpráva, že Ministerstvo zdravotnictví ČR zkrátí dobu nástupu psychologů do praxe na 6 let. Dosud museli do klinické praxe vstupovat až po devíti letech, studovat 5 let a 4 roky následně doplňovat vzdělání atestací. Nově bude místo 4 let stačit 1 rok. Opatření má pomoci zvládnout nedostatek odborníků na trhu.</p>
+            <p>Stále více občanů trpí úzkostmi, depresemi a ve svém zoufalství se utápí bez dosažitelné externí pomoci. Udává se, že nestabilitou je postiženo 50 % mladistvých a 30 % dospělých. Většina psychologů a psychiatrů už nové klienty nebere.</p>
+            <p>Nedávná studie uvádí, že 30 % vysokoškoláků minimálně jednou uvažovalo o sebevraždě a 15 % středoškoláků se pravidelně sebepoškozuje.</p>
+            <p>Psychologičtí greenhorni budou vrženi na trh, aby zachránili situaci. Jako obvykle se neřeší příčina, ale následek. Tedy projevy.</p>
+            <p>Přitom je to tak jednoduché. Jste-li na dně, první rada, kterou dostanete, je změnit prostředí. Odstřihnout se od zdroje ataků. Vypadnout z města plného stresu, vyměnit práci, přestat se fixovat na peníze a posunout v žebříčku hodnot osobní spokojenost. Rada dobrá, jenže statistika ukazuje jasně, že planá. Všichni chtějí do napínavé Prahy, vesnice se v klidu vylidňují. Jednoduchá, tvořivá práce třeba v přírodě nikoho neláká.</p>
+            <p>Další radou je změna jídelníčku. Celých 80 % serotoninu, hormonu štěstí, se tvoří ve střevech. Ovšem jen tehdy, jsou-li v pohodě, máte zdravý mikrobiom a ten zase má dost vlákniny pro svůj růst. Srovnej většinu populace s trendem fastfoodů. Další hormon štěstí, dopamin, který nás odměňuje za volní činnost, je také outsiderem. Je denní odříkání a vůle naší prioritou? …a poslední z triády, oxytocin, tedy hormon lásky, je v nervózním prostoru k nenalezení.</p>
+            <p>V příjemném hovoru mi nedávno jeden fakultativní klient psychiatrických léčeben řekl, že se na pobyt vždy těší. „Je tam taková pohoda. Hrabeme listí, povídáme si, večer posedíme s odborníkem a z hloubi duše si řekneme vše o našem životě, traumatech i křivdách. Je to tak uvolňující. O nic se nemusíme starat. To není léčebna, to jsou lázně. Když se zahledím přes plot do okolního světa, uvědomím si, že tam je ten pravý, skutečný blázinec.“</p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Příroda</span><span class="rec-meta">29. 9. 2026</span></summary>
+          <div class="rec-body">
+            <p>Text o černobylské zóně, kterou svět po katastrofě odepsal na tisíciletí. O devětatřicet let později je z ní jedna z nejdivočejších rezervací v Evropě. Populace velkých zvířat se zvýšila sedminásobně, po sto letech se vrátili medvědi, ulicemi chodí vlci, losi i Převalského koně.</p>
+            <p>Příroda se navíc přizpůsobuje. Vlci jsou odolnější vůči infekcím, žáby zčernaly díky melaninu, který pohlcuje záření, ptáci mají v krvi víc antioxidantů. Kolem reaktoru rostou houby, které ionizující záření dokážou využít jako zdroj energie, a v půdě žijí mikroorganismy rozkládající cesium a stroncium.</p>
+            <p>Pointa textu: nejlepší podmínkou pro obnovu přírody je nepřítomnost člověka. „Nejsi středem světa. Jsi jen host.“</p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Chytrý organismus</span><span class="rec-meta">5. 9. 2026</span></summary>
+          <div class="rec-body">
+            <p>V měsíčníku Vesmír 9/2026 vyšel článek o krvetvorných (hematopoetických) kmenových buňkách. Ty běžně sídlí v kostní dřeni a slezině. Když ale organismus pozná, že je to potřeba, třeba při chronickém zánětu, dokáže tvorbu krve přesunout i do jiných orgánů, u lidí například do jater.</p>
+            <p>Jirka k tomu dodává, že podobně si tělo nejspíš umí poradit i v jiných „potřebných“ situacích. Jen to zatím není vědecky prokázané.</p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Změna</span><span class="rec-meta">21. 8. 2026</span></summary>
+          <div class="rec-body">
+            <blockquote>„Svět se změnil způsobem, který neprospívá psychice. Místo sexuálních či rodičovských pudů nastupuje ten bažící po zpříjemnění existence. Nemluvíme spolu, nedotýkáme se.“</blockquote>
+            <p>– Prof. MUDr. Jiří Raboch, DrSc.</p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Druhá strana mince</span><span class="rec-meta">16. 7. 2026</span></summary>
+          <div class="rec-body">
+            <p>Jirkův postřeh: miliony let prověřený systém fungování těla snadno narušíme, když odstraňujeme projevy nemocí místo jejich příčin.</p>
+            <p>Jako příklad přikládá článek Hospodářských novin (14. 7. 2026) o glukosaminu, oblíbeném volně prodejném doplňku na klouby. Podle dvanáctileté analýzy zdravotních záznamů, kterou publikoval časopis Nature Metabolism, měli lidé s mírnou kognitivní poruchou, kteří glukosamin pravidelně užívali, o 25 % vyšší pravděpodobnost rozvoje Alzheimerovy choroby. U lidí, kteří už demencí trpěli, bylo užívání spojeno s o 25 % vyšším rizikem úmrtí.</p>
+            <p>Glukosamin je chemicky blízký cukru, pronikne do mozku a přiživuje tam nadměrné „cukerné značkování“ bílkovin, které je pro Alzheimerovu chorobu typické. Autoři upozorňují, že jde o observační data, ne definitivní důkaz. Výrobci doplňků výsledky zpochybňují.</p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Budoucnost… možná i blízká</span><span class="rec-meta">20. 6. 2026</span></summary>
+          <div class="rec-body">
+            <p>Vědecká prognóza budoucnosti v podání egyptologa prof. Miroslava Bárty z Českého egyptologického ústavu FF UK, vedoucího výzkumu v Abúsíru. Záznam je ve videoarchivu Poslanecké sněmovny.</p>
+            <p>Jirka k tomu přeje: „Užívejte života a hezký víkend!“</p>
+            <p><a href="https://videoarchiv.psp.cz/playa.php?cast=5322" target="_blank" rel="noopener">Pustit záznam</a></p>
+          </div>
+        </details>
+      </li>
+
+      <li>
+        <details>
+          <summary><span class="rec-title">Půda z lesa – Ha!!!</span><span class="rec-meta">10. 5. 2026</span></summary>
+          <div class="rec-body">
+            <p>Naše domovy hostí jiné mikroby než volná příroda a ve městech je ten rozdíl propastný. Děti, které tráví většinu času doma, tak přicházejí o kontakt s přírodní mikroflórou. Vědci to dávají do souvislosti s horším vývojem imunity a pozdějšími záněty, alergiemi či astmatem.</p>
+            <p>Tým Pirkky Kirjavainena z Finského národního ústavu pro zdraví proto vyzkoušel jednoduchý pokus. V pěti městských domech v Kuopiu během roku třikrát nasypali na rohožku před vchodem půdu z lesa. Pestrost bakterií a hub v domácím prachu výrazně vzrostla a posunula se k mikrobům typickým pro venkov. Právě kontakt s venkovskou mikroflórou podle dřívějších pokusů téhož týmu snižuje u dětí riziko astmatu.</p>
+            <p>„Povedlo se nám významně změnit mikrobiální prostředí domů velice jednoduchým a laciným zásahem,“ říká Kirjavainen. Studie vyšla v časopise Microbiome.</p>
+          </div>
+        </details>
+      </li>
+
     </ul>
+    </div>
   </div>
 
   <footer>
-    <p>© 2026 Samota u houpacího koně &nbsp;·&nbsp; Vyrobeno: 20.4.2026 &nbsp;·&nbsp; <a href="jirkova-doporuceni.html">Jirkova doporučení</a></p>
+    <p>© 2026 Samota u houpacího koně &nbsp;·&nbsp; Vyrobeno: 20.4.2026</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    (function () {
+      // Weak by design: the password only keeps casual visitors out, the content is in the page source.
+      var PASSWORD = 'jirka';
+      var KEY = 'jirkova-doporuceni-ok';
+      var gate = document.getElementById('gate');
+      var content = document.getElementById('recommendations-content');
+
+      function unlock() {
+        gate.hidden = true;
+        content.hidden = false;
+      }
+
+      try {
+        if (sessionStorage.getItem(KEY) === '1') unlock();
+      } catch (e) {
+        // sessionStorage unavailable (private mode): the visitor just types the password again.
+      }
+
+      gate.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var value = document.getElementById('gate-password').value.trim().toLowerCase();
+        if (value === PASSWORD) {
+          try { sessionStorage.setItem(KEY, '1'); } catch (err) { /* see above */ }
+          unlock();
+        } else {
+          document.getElementById('gate-error').hidden = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

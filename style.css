@@ -1247,6 +1247,15 @@ footer a {
 }
 
 /* ── JIRKOVA DOPORUČENÍ ── */
+footer .footer-quiet {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+}
+
+footer .footer-quiet a {
+  color: #555;
+}
+
 .recommendations {
   max-width: 760px;
   margin: 0 auto;
@@ -1259,29 +1268,117 @@ footer a {
   margin-bottom: 2rem;
 }
 
+.gate label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.gate-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.gate input {
+  flex: 1 1 200px;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.gate-error {
+  margin-top: 0.8rem;
+  color: #b00020;
+}
+
 .recommendation-list {
   list-style: none;
   padding: 0;
 }
 
-.recommendation-list li {
+.recommendation-list > li {
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--border);
 }
 
-.recommendation-list a {
+.rec-title {
   color: var(--accent);
   font-size: 1.15rem;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.recommendation-list a:hover {
+a.rec-title:hover,
+summary:hover .rec-title {
   text-decoration: underline;
 }
 
-.recommendation-list p {
-  margin-top: 0.4rem;
+.recommendation-list summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.recommendation-list summary::-webkit-details-marker {
+  display: none;
+}
+
+summary .rec-title::after {
+  content: ' +';
+  font-weight: 400;
+}
+
+details[open] > summary .rec-title::after {
+  content: ' −';
+}
+
+.rec-meta {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.rec-body {
+  margin-top: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.rec-body p,
+.rec-body ul,
+.rec-body blockquote {
+  margin-bottom: 1rem;
+}
+
+.rec-body ul {
+  padding-left: 1.3rem;
+}
+
+.rec-body li {
+  margin-bottom: 0.4rem;
+}
+
+.rec-body h3 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.8rem;
+}
+
+.rec-body h4 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.rec-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  font-style: italic;
   color: #444;
-  line-height: 1.7;
+}
+
+.rec-body a {
+  color: var(--accent);
+  font-weight: 600;
 }
