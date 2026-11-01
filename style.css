@@ -1245,3 +1245,43 @@ footer a {
     grid-template-rows: repeat(4, 140px);
   }
 }
+
+/* ── JIRKOVA DOPORUČENÍ ── */
+.recommendations {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: calc(70px + 4rem) 2rem 5rem;
+  min-height: 60vh;
+}
+
+.recommendations h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.recommendation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-list li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.recommendation-list a {
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.recommendation-list a:hover {
+  text-decoration: underline;
+}
+
+.recommendation-list p {
+  margin-top: 0.4rem;
+  color: #444;
+  line-height: 1.7;
+}
