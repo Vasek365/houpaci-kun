@@ -39,17 +39,6 @@
     <a href="index.html" class="back-link">Zpět na úvod</a>
     <h1>Zajímavé odkazy</h1>
 
-    <!-- Heslo je jen závora pro náhodné návštěvníky: obsah zůstává ve zdrojovém kódu stránky. -->
-    <form id="gate" class="gate">
-      <label for="gate-password">Stránka je chráněná heslem.</label>
-      <div class="gate-row">
-        <input type="password" id="gate-password" autocomplete="current-password" required />
-        <button type="submit" class="btn">Vstoupit</button>
-      </div>
-      <p id="gate-error" class="gate-error" hidden>Nesprávné heslo.</p>
-    </form>
-
-    <div id="recommendations-content" hidden>
     <!--
       Nová položka: zkopírovat celý blok <li>…</li> a vložit ho nahoru (nejnovější první).
       Odkaz ven = <a class="rec-title">, text ke čtení = <details> se <summary>.
@@ -57,28 +46,13 @@
     <ul class="recommendation-list">
 
       <li>
-        <a class="rec-title" href="https://www.youtube.com/watch?v=iSZNd54ePo4" target="_blank" rel="noopener">Slepec v chrámu noci</a>
-        <p class="rec-meta">Video · Michal Souček</p>
+        <a class="rec-title" href="https://www.youtube.com/watch?v=qm6r-JsCGpQ" target="_blank" rel="noopener">Duše zpívá</a>
+        <p class="rec-meta">Videoklip · Michal Souček</p>
       </li>
 
       <li>
-        <details>
-          <summary><span class="rec-title">Konference Vize Česka</span><span class="rec-meta">15.–16. 10. 2026 · Kino Svět Tábor</span></summary>
-          <div class="rec-body">
-            <p>Dvoudenní konference v táborském Kině Svět. První den patřil veřejnému hlavnímu panelu, druhý den neveřejnému studentskému panelu. Mezi organizátory byl Jihočeský kraj, město Tábor, Gymnázium Pierra de Coubertina Tábor a MVDr. Jiří Návara.</p>
-            <h3>Hlavní panel – 15. 10. 2026</h3>
-            <ul>
-              <li><strong>prof. RNDr. Tomáš Cajthaml, Ph.D., DSc.</strong> (PřF UK) – Postmoderní, neudržitelné a neviditelné znečištění kolem nás</li>
-              <li><strong>PhDr. Ing. Martin Janíčko, Ph.D.</strong> (MND a.s.) – Česká ekonomika dnes, zítra a pozítří</li>
-              <li><strong>PhDr. Martin Ehl, Ph.D.</strong> (Hospodářské noviny) – Globální soupeření Číny a USA</li>
-              <li><strong>doc. RNDr. Marek Špinka, CSc.</strong> (ČZU) – Inteligence a emoce: evoluční pohled na psychiku zvířat a člověka</li>
-              <li><strong>doc. RNDr. Mgr. Ivan Hadrián Tuf, Ph.D.</strong> (UP Olomouc) – Proč si myslíme, že jsme morální – a proč se mýlíme?</li>
-              <li><strong>RNDr. Václav Cílek, CSc.</strong> – Jak zacházet s budoucností? Periodicita, megatrendy a foresightová analýza</li>
-              <li><strong>prof. Dr. RNDr. Oldřich Lapčík</strong> (VŠCHT) – Biologicky aktivní látky</li>
-            </ul>
-            <p><a href="doporuceni/vize-ceska-2026.pdf" target="_blank" rel="noopener">Plakát konference (PDF)</a></p>
-          </div>
-        </details>
+        <a class="rec-title" href="https://www.youtube.com/watch?v=iSZNd54ePo4" target="_blank" rel="noopener">Slepec v chrámu noci</a>
+        <p class="rec-meta">Video · Michal Souček</p>
       </li>
 
       <li>
@@ -170,7 +144,6 @@
       </li>
 
     </ul>
-    </div>
   </div>
 
   <footer>
@@ -178,36 +151,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    (function () {
-      // Weak by design: the password only keeps casual visitors out, the content is in the page source.
-      var PASSWORD = 'jirka';
-      var KEY = 'zajimave-odkazy-ok';
-      var gate = document.getElementById('gate');
-      var content = document.getElementById('recommendations-content');
-
-      function unlock() {
-        gate.hidden = true;
-        content.hidden = false;
-      }
-
-      try {
-        if (sessionStorage.getItem(KEY) === '1') unlock();
-      } catch (e) {
-        // sessionStorage unavailable (private mode): the visitor just types the password again.
-      }
-
-      gate.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var value = document.getElementById('gate-password').value.trim().toLowerCase();
-        if (value === PASSWORD) {
-          try { sessionStorage.setItem(KEY, '1'); } catch (err) { /* see above */ }
-          unlock();
-        } else {
-          document.getElementById('gate-error').hidden = false;
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

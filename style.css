@@ -1268,31 +1268,6 @@ footer .footer-quiet a {
   margin-bottom: 2rem;
 }
 
-.gate label {
-  display: block;
-  margin-bottom: 0.8rem;
-  color: #444;
-}
-
-.gate-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.gate input {
-  flex: 1 1 200px;
-  padding: 0.7rem 1rem;
-  font: inherit;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.gate-error {
-  margin-top: 0.8rem;
-  color: #b00020;
-}
-
 .recommendation-list {
   list-style: none;
   padding: 0;
